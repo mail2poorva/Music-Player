@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Music Player</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Assests/CSS Folder/home.css" />
+  </head>
+  <body>
+    <!-- MAIN HEADER SECTION OF THE PAGE -->
+    <header class="header">
+      <div class="header-part-1">
+        <a href="#">
+          <img
+            src="https://www.transparentpng.com/thumb/music/music-yosemite-flat-icons-png-24.png"
+            alt="music yosemite flat icons png @transparentpng.com"
+            class="header-logo-img"
+          />
+        </a>
+        <h1 class="header-logo-name">Sound Beats</h1>
+        <a href="./Assests/singlePlaylist.html" class="header-fav"
+          ><i class="far fa-heart"></i> Favourites</a
+        >
+      </div>
+      <div class="header-part-2">
+        <div class="search-box">
+          <button class="btn-search"><i class="fas fa-search"></i></button>
+          <input
+            type="text"
+            class="input-search"
+            placeholder="Type to Search..."
+          />
+        </div>
+
+        <div class="dropdown" style="float: left">
+          <button class="dropbtn"><i class="fas fa-bell"></i></button>
+          <div class="dropdown-content">
+            <h1 class="dropdown-content-h1">No Notification at this moment</h1>
+          </div>
+        </div>
+        <div class="header-account">
+          <a href=""><i class="far fa-user-circle"></i> </a>
+        </div>
+
+        <span style="cursor: pointer" onclick="openNav()" class="Option-btn"
+          >&#9776; Queue</span
+        >
+      </div>
+
+      <!-- Side Menu Bar for Smaller View -->
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="aside-heading">
+          <h1 class="aside-h1">Queue</h1>
+          <select name="queue" id="aside-queue">
+            <option value="" class="aside-queue-option">Recently Played</option>
+            <option value="" class="aside-queue-option">Favourites</option>
+            <option value="" class="aside-queue-option">
+              Popularly Played
+            </option>
+          </select>
+        </div>
+        <div class="aside-list">
+          <ul type="none">
+            <!-- Item - 1 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <p>01</p>
+                <img
+                  src="https://a10.gaanacdn.com/gn_img/song/6Zxb2r7b9w/xb2jvG6Gb9/size_m_1570080954.webp"
+                  alt=""
+                  class="aside-list-leftSection-img"
+                />
+                <p>Tum Hi Aana</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <i class="far fa-heart like"></i>
+                <a href="#"><i class="fas fa-play play"></i></a>
+              </div>
+            </li>
+            <!-- Item - 2 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <p>02</p>
+                <img
+                  src="https://a10.gaanacdn.com/gn_img/song/6Zxb2r7b9w/xb2jOOngb9/size_m_1578134227.webp"
+                  alt=""
+                  class="aside-list-leftSection-img"
+                />
+                <p>Illegal Weapon 2.0</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <i class="far fa-heart like"></i>
+                <a href="#"><i class="fas fa-play play"></i></a>
+              </div>
+            </li>
+            <!-- Item - 3 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <p>03</p>
+                <img
+                  src="https://a10.gaanacdn.com/images/albums/50/150/crop_175x175_150.jpg"
+                  alt=""
+                  class="aside-list-leftSection-img"
+                />
+                <p>Genda Phool</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <i class="far fa-heart like"></i>
+                <a href="#"><i class="fas fa-play play"></i></a>
+              </div>
+            </li>
+            <!-- Item - 4 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <p>04</p>
+                <img
+                  src="https://a10.gaanacdn.com/images/song/88/26945988/crop_175x175_1559064006.jpg"
+                  alt=""
+                  class="aside-list-leftSection-img"
+                />
+                <p>Alla Re</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <i class="far fa-heart like"></i>
+                <a href="#"><i class="fas fa-play play"></i></a>
+              </div>
+            </li>
+            <!-- Item - 5 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <p>05</p>
+                <img
+                  src="https://a10.gaanacdn.com/images/song/21/29421921/crop_175x175_1580472869.jpg"
+                  alt=""
+                  class="aside-list-leftSection-img"
+                />
+                <p>Biba</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <i class="far fa-heart like"></i>
+                <a href="#"><i class="fas fa-play play"></i></a>
+              </div>
+            </li>
+            <!-- Item - 6 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <p>06</p>
+                <img
+                  src="https://a10.gaanacdn.com/images/albums/13/1580913/crop_175x175_1580913.jpg"
+                  alt=""
+                  class="aside-list-leftSection-img"
+                />
+                <p>Soch Na Sake</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <i class="far fa-heart like"></i>
+                <a href="#"><i class="fas fa-play play"></i></a>
+              </div>
+            </li>
+            <!-- Item - 7 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <p>07</p>
+                <img
+                  src="https://a10.gaanacdn.com/images/song/59/24056559/crop_175x175_1533392103.jpg"
+                  alt=""
+                  class="aside-list-leftSection-img"
+                />
+                <p>Dollar</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <i class="far fa-heart like"></i>
+                <a href="#"><i class="fas fa-play play"></i></a>
+              </div>
+            </li>
+            <!-- Item - 8 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <p>08</p>
+                <img
+                  src="https://a10.gaanacdn.com/images/albums/80/1882980/crop_175x175_1491552619_1882980.jpg"
+                  alt=""
+                  class="aside-list-leftSection-img"
+                />
+                <p>Mercy</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <i class="far fa-heart like"></i>
+                <a href="#"><i class="fas fa-play play"></i></a>
+              </div>
+            </li>
+            <!-- Item - 9 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <p>09</p>
+                <img
+                  src="https://a10.gaanacdn.com/images/albums/70/219070/crop_175x175_219070.jpg"
+                  alt=""
+                  class="aside-list-leftSection-img"
+                />
+                <p>Chull</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <i class="far fa-heart like"></i>
+                <a href="#"><i class="fas fa-play play"></i></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- media image for responsive layout -->
+    <div class="media-img">
+      <a href="./Assests/singlePlaylist.html">
+        <img
+          src="https://play-lh.googleusercontent.com/2X-H9MIopl01IozUi6mA5RDOn3_TVgqtGOVZij82aX-QlJCpEsGrozaNhz5Ve3kfpKo"
+          alt=""
+          srcset=""
+        />
+      </a>
+    </div>
+
+    <!-- ASIDE ELEMENT  CONTAINING  QUEUE  -->
+    <aside class="aside">
+      <div class="aside-heading">
+        <h1 class="aside-h1">Queue</h1>
+        <select name="queue" id="aside-queue">
+          <option value="" class="aside-queue-option">Recently Played</option>
+          <option value="" class="aside-queue-option">Favourites</option>
+          <option value="" class="aside-queue-option">Popularly Played</option>
+        </select>
+      </div>
+      <div class="aside-list">
+        <ul type="none">
+          <!-- Item - 1 -->
+          <li>
+            <div class="aside-list-leftSection">
+              <p>01</p>
+              <img
+                src="https://a10.gaanacdn.com/gn_img/song/6Zxb2r7b9w/xb2jvG6Gb9/size_m_1570080954.webp"
+                alt=""
+                class="aside-list-leftSection-img"
+              />
+              <p>Tum Hi Aana</p>
+            </div>
+
+            <div class="aside-list-rightSection">
+              <i class="far fa-heart like"></i>
+              <a href="#"><i class="fas fa-play play"></i></a>
+            </div>
+          </li>
+          <!-- Item - 2 -->
+          <li>
+            <div class="aside-list-leftSection">
+              <p>02</p>
+              <img
+                src="https://a10.gaanacdn.com/gn_img/song/6Zxb2r7b9w/xb2jOOngb9/size_m_1578134227.webp"
+                alt=""
+                class="aside-list-leftSection-img"
+              />
+              <p>Illegal Weapon 2.0</p>
+            </div>
+
+            <div class="aside-list-rightSection">
+              <i class="far fa-heart like"></i>
+              <a href="#"><i class="fas fa-play play"></i></a>
+            </div>
+          </li>
+          <!-- Item - 3 -->
+          <li>
+            <div class="aside-list-leftSection">
+              <p>03</p>
+              <img
+                src="https://a10.gaanacdn.com/images/albums/50/150/crop_175x175_150.jpg"
+                alt=""
+                class="aside-list-leftSection-img"
+              />
+              <p>Genda Phool</p>
+            </div>
+
+            <div class="aside-list-rightSection">
+              <i class="far fa-heart like"></i>
+              <a href="#"><i class="fas fa-play play"></i></a>
+            </div>
+          </li>
+          <!-- Item - 4 -->
+          <li>
+            <div class="aside-list-leftSection">
+              <p>04</p>
+              <img
+                src="https://a10.gaanacdn.com/images/song/88/26945988/crop_175x175_1559064006.jpg"
+                alt=""
+                class="aside-list-leftSection-img"
+              />
+              <p>Alla Re</p>
+            </div>
+
+            <div class="aside-list-rightSection">
+              <i class="far fa-heart like"></i>
+              <a href="#"><i class="fas fa-play play"></i></a>
+            </div>
+          </li>
+          <!-- Item - 5 -->
+          <li>
+            <div class="aside-list-leftSection">
+              <p>05</p>
+              <img
+                src="https://a10.gaanacdn.com/images/song/21/29421921/crop_175x175_1580472869.jpg"
+                alt=""
+                class="aside-list-leftSection-img"
+              />
+              <p>Biba</p>
+            </div>
+
+            <div class="aside-list-rightSection">
+              <i class="far fa-heart like"></i>
+              <a href="#"><i class="fas fa-play play"></i></a>
+            </div>
+          </li>
+          <!-- Item - 6 -->
+          <li>
+            <div class="aside-list-leftSection">
+              <p>06</p>
+              <img
+                src="https://a10.gaanacdn.com/images/albums/13/1580913/crop_175x175_1580913.jpg"
+                alt=""
+                class="aside-list-leftSection-img"
+              />
+              <p>Soch Na Sake</p>
+            </div>
+
+            <div class="aside-list-rightSection">
+              <i class="far fa-heart like"></i>
+              <a href="#"><i class="fas fa-play play"></i></a>
+            </div>
+          </li>
+          <!-- Item - 7 -->
+          <li>
+            <div class="aside-list-leftSection">
+              <p>07</p>
+              <img
+                src="https://a10.gaanacdn.com/images/song/59/24056559/crop_175x175_1533392103.jpg"
+                alt=""
+                class="aside-list-leftSection-img"
+              />
+              <p>Dollar</p>
+            </div>
+
+            <div class="aside-list-rightSection">
+              <i class="far fa-heart like"></i>
+              <a href="#"><i class="fas fa-play play"></i></a>
+            </div>
+          </li>
+          <!-- Item - 8 -->
+          <li>
+            <div class="aside-list-leftSection">
+              <p>08</p>
+              <img
+                src="https://a10.gaanacdn.com/images/albums/80/1882980/crop_175x175_1491552619_1882980.jpg"
+                alt=""
+                class="aside-list-leftSection-img"
+              />
+              <p>Mercy</p>
+            </div>
+
+            <div class="aside-list-rightSection">
+              <i class="far fa-heart like"></i>
+              <a href="#"><i class="fas fa-play play"></i></a>
+            </div>
+          </li>
+          <!-- Item - 9 -->
+          <li>
+            <div class="aside-list-leftSection">
+              <p>09</p>
+              <img
+                src="https://a10.gaanacdn.com/images/albums/70/219070/crop_175x175_219070.jpg"
+                alt=""
+                class="aside-list-leftSection-img"
+              />
+              <p>Chull</p>
+            </div>
+
+            <div class="aside-list-rightSection">
+              <i class="far fa-heart like"></i>
+              <a href="#"><i class="fas fa-play play"></i></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- WHOLE WORKING OF THE PAGE IS IN THIS MAIN SECTION  -->
+    <main>
+      <!-- CAROUSEL SECTION OF THE PAGE -->
+      <section class="section-carousel">
+        <div class="container">
+          <input type="radio" name="slider" id="item-1" checked />
+          <input type="radio" name="slider" id="item-2" />
+          <input type="radio" name="slider" id="item-3" />
+          <div class="cards">
+            <label class="card" for="item-1" id="song-1">
+              <img
+                src="./Assests/Images/Carousel/image-1.webp"
+                alt="song"
+                class="carousel-img"
+              />
+            </label>
+            <label class="card" for="item-2" id="song-2">
+              <img
+                src="./Assests/Images/Carousel/image-2.webp"
+                alt="song"
+                class="carousel-img"
+              />
+            </label>
+            <label class="card" for="item-3" id="song-3">
+              <img
+                src="./Assests/Images/Carousel/image-3.webp"
+                alt="song"
+                class="carousel-img"
+              />
+            </label>
+          </div>
+        </div>
+      </section>
+      <!-- LATEST RELEASE SECTION OF THE PAGE -->
+      <section class="section-release">
+        <h1 class="section-release-h1">Latest Release</h1>
+        <!-- GRID SYSTEM OF THE LATEST RELEASES -->
+        <section class="section-release-grid">
+          <!-- PART-1 OF GRID SYSTEM  -->
+          <div class="section-release-grid-part">
+            <div class="section-release-imgSec">
+              <div class="section-imageCont">
+                <img
+                  src="https://a10.gaanacdn.com/images/albums/54/2291554/crop_175x175_1545905387_2291554.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="section-release-imgSec-content">
+                <h4>Aankh Marey</h4>
+                <p>Dec 13,2018</p>
+              </div>
+            </div>
+            <div class="section-release-option">
+              <i class="fas fa-ellipsis-h"></i>
+              <p>04:12</p>
+            </div>
+          </div>
+          <!-- PART-2 OF GRID SYSTEM  -->
+          <div class="section-release-grid-part">
+            <div class="section-release-imgSec">
+              <div class="section-imageCont">
+                <img
+                  src="https://a10.gaanacdn.com/images/albums/54/2291554/crop_175x175_1545905387_2291554.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="section-release-imgSec-content">
+                <h4>Aankh Marey</h4>
+                <p>Dec 13,2018</p>
+              </div>
+            </div>
+            <div class="section-release-option">
+              <i class="fas fa-ellipsis-h"></i>
+              <p>04:12</p>
+            </div>
+          </div>
+          <!-- PART-3 OF GRID SYSTEM  -->
+          <div class="section-release-grid-part">
+            <div class="section-release-imgSec">
+              <div class="section-imageCont">
+                <img
+                  src="https://a10.gaanacdn.com/images/albums/54/2291554/crop_175x175_1545905387_2291554.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="section-release-imgSec-content">
+                <h4>Aankh Marey</h4>
+                <p>Dec 13,2018</p>
+              </div>
+            </div>
+            <div class="section-release-option">
+              <i class="fas fa-ellipsis-h"></i>
+              <p>04:12</p>
+            </div>
+          </div>
+          <!-- PART-4 OF GRID SYSTEM  -->
+          <div class="section-release-grid-part">
+            <div class="section-release-imgSec">
+              <div class="section-imageCont">
+                <img
+                  src="https://a10.gaanacdn.com/images/albums/54/2291554/crop_175x175_1545905387_2291554.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="section-release-imgSec-content">
+                <h4>Aankh Marey</h4>
+                <p>Dec 13,2018</p>
+              </div>
+            </div>
+            <div class="section-release-option">
+              <i class="fas fa-ellipsis-h"></i>
+              <p>04:12</p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- POPULAR ARTISTS SECTION OF THE PAGE -->
+      <section class="section-popularArtist">
+        <h1>Popular Artists</h1>
+        <div class="section-popularArtist-grid">
+          <!-- Part - 1 of Popular Artist Grid -->
+          <div class="section-popularArtist-part">
+            <div class="section-imageCont-circle">
+              <img src="./Assests/Images/Taylor-Swift.jpg" alt="" />
+            </div>
+            <h4>Taylor Swift</h4>
+          </div>
+          <!-- Part - 2 of Popular Artist Grid -->
+          <div class="section-popularArtist-part">
+            <div class="section-imageCont-circle">
+              <img src="./Assests/Images/justin-bieber.jpg" alt="" />
+            </div>
+            <h4>Justin Bieber</h4>
+          </div>
+          <!-- Part - 3 of Popular Artist Grid -->
+          <div class="section-popularArtist-part">
+            <div class="section-imageCont-circle">
+              <img src="./Assests/Images/ed-sheeran.jpg" alt="" />
+            </div>
+            <h4>Ed Sheeran</h4>
+          </div>
+          <!-- Part - 4 of Popular Artist Grid -->
+          <div class="section-popularArtist-part">
+            <div class="section-imageCont-circle">
+              <img src="./Assests/Images/ARRahman.jpg" alt="" />
+            </div>
+            <h4>A. R. Rahman</h4>
+          </div>
+          <!-- Part - 5 of Popular Artist Grid -->
+          <div class="section-popularArtist-part">
+            <div class="section-imageCont-circle">
+              <img src="./Assests/Images/Shreya.jpg" alt="" />
+            </div>
+            <h4>Shreya Ghosal</h4>
+          </div>
+          <!-- Part - 6 of Popular Artist Grid -->
+          <div class="section-popularArtist-part">
+            <div class="section-imageCont-circle">
+              <img src="./Assests/Images/SonuNigam.jpg" alt="" />
+            </div>
+            <h4>Sonu Nigam</h4>
+          </div>
+        </div>
+      </section>
+      <!-- MUSIC STATION SECTION OF THE PAGE -->
+      <section class="section-musicStations">
+        <div class="section-musicStations-grid">
+          <div class="section-musicStations-part">
+            <div class="section-musicStations-img-main">
+              <img src="./Assests/Images/Stations.jpg" alt="" />
+            </div>
+          </div>
+          <div class="section-musicStations-part">
+            <div class="section-musicStations-img">
+              <img
+                src="https://a10.gaanacdn.com/images/albums/4/1805504/crop_175x175_1805504.jpg"
+                alt=""
+              />
+            </div>
+            <h4>Love</h4>
+          </div>
+          <div class="section-musicStations-part">
+            <div class="section-musicStations-img">
+              <img
+                src="https://a10.gaanacdn.com/images/albums/12/1825812/crop_175x175_1825812.jpg"
+                alt=""
+              />
+            </div>
+            <h4>Pop</h4>
+          </div>
+          <div class="section-musicStations-part">
+            <div class="section-musicStations-img">
+              <img
+                src="https://a10.gaanacdn.com/images/albums/41/2171241/crop_175x175_2171241.jpg"
+                alt=""
+              />
+            </div>
+            <h4>Retro</h4>
+          </div>
+          <div class="section-musicStations-part">
+            <div class="section-musicStations-img">
+              <img
+                src="https://a10.gaanacdn.com/gn_img/shows/mGjKr1b6zX/GjKrPpoW6z/size_m_1620122478.jpg"
+                alt=""
+              />
+            </div>
+            <h4>Workout</h4>
+          </div>
+          <div class="section-musicStations-part">
+            <div class="section-musicStations-img">
+              <img
+                src="https://a10.gaanacdn.com/gn_pl_img/playlists/jBr3gybR1m/Br3gZdpNKR/size_m_1515073262.jpg"
+                alt=""
+              />
+              <h4>Rock</h4>
+            </div>
+          </div>
+          <div class="section-musicStations-part">
+            <div class="section-musicStations-img">
+              <img
+                src="https://direct.rhapsody.com/imageserver/images/alb.487020244/600x600.jpg"
+                alt=""
+              />
+            </div>
+            <h4>Chill</h4>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION OF DIFFERENT OCCASIONS LIKE ROADTRIPS , PARTIES ETC. -->
+      <section class="section-ocassion">
+        <div class="section-ocassion-grid">
+          <div class="section-ocassion-part">
+            <div class="section-ocassion-part-img">
+              <img src="./Assests/Images/party.jpg" alt="" />
+            </div>
+            <h4>Party</h4>
+          </div>
+          <div class="section-ocassion-part">
+            <div class="section-ocassion-part-img">
+              <img src="./Assests/Images/electronic.jpg" alt="" />
+            </div>
+            <h4>Electronic</h4>
+          </div>
+          <div class="section-ocassion-part">
+            <div class="section-ocassion-part-img">
+              <img src="./Assests/Images/roadtrip.jpg" alt="" />
+            </div>
+            <h4>Road Trips</h4>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION CONTAINING LATEST RELEASE OF HINDI -->
+      <section class="section-latest section-latest-Hindi">
+        <h1>Latest in Hindi</h1>
+        <div class="section-latest-grid">
+          <!-- PART - 1 OF LATEST HINDI -->
+          <div class="section-latest-part">
+            <div class="section-latest-part-img">
+              <img src="./Assests/Images/LatestHindi/gendaphool.jpg" alt="" />
+            </div>
+            <div class="section-latest-part-content">
+              <h4>Genda Phool</h4>
+              <p>May 12,2019</p>
+            </div>
+          </div>
+          <!-- PART - 2 OF LATEST HINDI -->
+          <div class="section-latest-part">
+            <div class="section-latest-part-img">
+              <img src="./Assests/Images/LatestHindi/Garmi.webp" alt="" />
+            </div>
+            <div class="section-latest-part-content">
+              <h4>Garmi</h4>
+              <p>May 12,2019</p>
+            </div>
+          </div>
+          <!-- PART - 3 OF LATEST HINDI -->
+          <div class="section-latest-part">
+            <div class="section-latest-part-img">
+              <img src="./Assests/Images/LatestHindi/Pachtaoge.webp" alt="" />
+            </div>
+            <div class="section-latest-part-content">
+              <h4>Pachtaoge</h4>
+              <p>May 12,2019</p>
+            </div>
+          </div>
+          <!-- PART - 4 OF LATEST HINDI -->
+          <div class="section-latest-part">
+            <div class="section-latest-part-img">
+              <img
+                src="./Assests/Images/LatestHindi/TuHIYaarMera.webp"
+                alt=""
+              />
+            </div>
+            <div class="section-latest-part-content">
+              <h4>Tu Hi Yaar Mera</h4>
+              <p>May 12,2019</p>
+            </div>
+          </div>
+          <!-- PART - 5 OF LATEST HINDI -->
+          <div class="section-latest-part">
+            <div class="section-latest-part-img">
+              <img src="./Assests/Images/LatestHindi/IshqTera.webp" alt="" />
+            </div>
+            <div class="section-latest-part-content">
+              <h4>Ishq Tera</h4>
+              <p>May 12,2019</p>
+            </div>
+          </div>
+          <!-- PART - 6 OF LATEST HINDI -->
+          <div class="section-latest-part">
+            <div class="section-latest-part-img">
+              <img src="./Assests/Images/LatestHindi/GoaBeach.webp" alt="" />
+            </div>
+            <div class="section-latest-part-content">
+              <h4>Goa Beach</h4>
+              <p>May 12,2019</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION CONTAINING LATEST RELEASE OF ENGLISH -->
+      <section class="section-latest section-latest-english">
+        <h1>Latest in English</h1>
+        <div class="section-latest-grid">
+          <!-- PART - 1 OF LATEST ENGLISH -->
+          <div class="section-latest-part">
+            <div class="section-latest-part-img">
+              <img src="./Assests/Images/LatestEng/Bellever.webp" alt="" />
+            </div>
+            <div class="section-latest-part-content">
+              <h4>Bellever</h4>
+              <p>May 12,2019</p>
+            </div>
+          </div>
+          <!-- PART - 2 OF LATEST ENGLISH -->
+          <div class="section-latest-part">
+            <div class="section-latest-part-img">
+              <img src="./Assests/Images/LatestEng/memories.jpg" alt="" />
+            </div>
+            <div class="section-latest-part-content">
+              <h4>Memories</h4>
+              <p>May 12,2019</p>
+            </div>
+          </div>
+          <!-- PART - 3 OF LATEST ENGLISH -->
+          <div class="section-latest-part">
+            <div class="section-latest-part-img">
+              <img src="./Assests/Images/LatestEng/rightnow.webp" alt="" />
+            </div>
+            <div class="section-latest-part-content">
+              <h4>Right Now</h4>
+              <p>May 12,2019</p>
+            </div>
+          </div>
+          <!-- PART - 4 OF LATEST ENGLISH -->
+          <div class="section-latest-part">
+            <div class="section-latest-part-img">
+              <img src="./Assests/Images/LatestEng/senorita.webp" alt="" />
+            </div>
+            <div class="section-latest-part-content">
+              <h4>Senorita</h4>
+              <p>May 12,2019</p>
+            </div>
+          </div>
+          <!-- PART - 5 OF LATEST ENGLISH -->
+          <div class="section-latest-part">
+            <div class="section-latest-part-img">
+              <img src="./Assests/Images/LatestEng/Shameless.jpg" alt="" />
+            </div>
+            <div class="section-latest-part-content">
+              <h4>Shameless</h4>
+              <p>May 12,2019</p>
+            </div>
+          </div>
+          <!-- PART - 6 OF LATEST ENGLISH -->
+          <div class="section-latest-part">
+            <div class="section-latest-part-img">
+              <img src="./Assests/Images/LatestEng/WithoutMe.webp" alt="" />
+            </div>
+            <div class="section-latest-part-content">
+              <h4>Without Me</h4>
+              <p>May 12,2019</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- THIS IS THE MUSIC PLAYER SYSTEM OF THE WESBITE -->
+    <footer class="footer">
+      <section class="footer-part-1">
+        <img
+          src="https://a10.gaanacdn.com/images/albums/84/4371784/crop_175x175_4371784.jpg"
+          alt=""
+          class="footer-part-1-img"
+        />
+        <h1 class="footer-part-1-h1">Filhaal 2</h1>
+        <i class="far fa-heart like"></i>
+        <i class="fas fa-ban"></i>
+      </section>
+
+      <section class="footer-part-2">
+        <div class="footer-part-2-action">
+          <i class="fas fa-random"></i>
+          <i class="fas fa-backward"></i>
+          <i class="far fa-play-circle" style="font-size: 25px"></i>
+          <i class="fas fa-forward"></i>
+          <img src="./Assests/Images/repeat.png" alt="" />
+        </div>
+        <br />
+
+        <div class="footer-part-2-vol">
+          <span class="span-1"> 04:02</span>
+
+          <input
+            type="range"
+            name="volume"
+            id="volume"
+            value="0"
+            min="0"
+            max="100"
+          />
+          <span class="span-2">02:01</span>
+        </div>
+      </section>
+
+      <section class="footer-part-3">
+        <i class="fas fa-outdent"></i>
+        <img src="./Assests/Images/computer.png" alt="" />
+        <div class="volume">
+          <i class="fas fa-volume-up"></i>
+          <input type="range" name="vol" id="" min="0" max="100" value="50" />
+        </div>
+        <i class="fas fa-expand" onclick="mKeyF11()"></i>
+      </section>
+    </footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.8.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.8.0/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+    <!-- SOME JAVASCRIPT FOR MAKING IT MORE INTERACTIVE -->
+    <script>
+      var Color = document.querySelectorAll(".like");
+      var ColorArr = Array.from(Color);
+      document.querySelectorAll(".like").forEach((item) => {
+        item.addEventListener("click", (e) => {
+          //handle click
+          console.log(e.target);
+          var likeClr = e.target;
+          likeClr.classList.toggle("colorChange");
+        });
+      });
+
+      function mKeyF11() {
+        if (document.documentElement.webkitRequestFullscreen) {
+          document.documentElement.webkitRequestFullscreen();
+        }
+      }
+
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "450px";
+        document.getElementById("mySidenav").style.zIndex = "1";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("mySidenav").style.zIndex = "-1";
+      }
+    </script>
+  </body>
+</html>

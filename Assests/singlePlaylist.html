@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS Folder/singlePlaylist.css" />
+    <title>My Music Player</title>
+  </head>
+  <body>
+    <!-- MAIN HEADER SECTION OF THE PAGE -->
+    <header class="header">
+      <div class="header-part-1">
+        <a href="../index.html">
+          <img
+            src="https://www.transparentpng.com/thumb/music/music-yosemite-flat-icons-png-24.png"
+            alt="music yosemite flat icons png @transparentpng.com"
+            class="header-logo-img"
+          />
+        </a>
+        <h1 class="header-logo-name">Sound Beats</h1>
+        <a href="./SinglePlaylist.html" class="header-fav"
+          ><i class="far fa-heart"></i> Favourites</a
+        >
+      </div>
+      <div class="header-part-2">
+        <div class="search-box">
+          <button class="btn-search"><i class="fas fa-search"></i></button>
+          <input
+            type="text"
+            class="input-search"
+            placeholder="Type to Search..."
+          />
+        </div>
+
+        <div class="dropdown" style="float: left">
+          <button class="dropbtn"><i class="fas fa-bell"></i></button>
+          <div class="dropdown-content">
+            <h1 class="dropdown-content-h1">No Notification at this moment</h1>
+          </div>
+        </div>
+        <div class="header-account">
+          <a href=""><i class="far fa-user-circle"></i> </a>
+        </div>
+
+        <span style="cursor: pointer" onclick="openNav()" class="Option-btn"
+          >&#9776; Queue</span
+        >
+      </div>
+
+      <!-- Side Menu Bar for Smaller View -->
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <section class="aside-part">
+          <div class="aside-part-heading">
+            <h1>Similiar Playlists</h1>
+            <a href="">View All</a>
+          </div>
+
+          <div class="aside-list">
+            <ul type="none">
+              <!-- Item - 1 -->
+              <li>
+                <div class="aside-list-leftSection">
+                  <img
+                    src="https://a10.gaanacdn.com/gn_img/song/6Zxb2r7b9w/xb2jvG6Gb9/size_m_1570080954.webp"
+                    alt=""
+                    class="aside-list-leftSection-img"
+                  />
+                  <p>Tum Hi Aana</p>
+                </div>
+
+                <div class="aside-list-rightSection">
+                  <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                  <p>04:12</p>
+                </div>
+              </li>
+              <!-- Item - 2 -->
+              <li>
+                <div class="aside-list-leftSection">
+                  <img
+                    src="https://a10.gaanacdn.com/gn_img/song/6Zxb2r7b9w/xb2jvG6Gb9/size_m_1570080954.webp"
+                    alt=""
+                    class="aside-list-leftSection-img"
+                  />
+                  <p>Tum Hi Aana</p>
+                </div>
+
+                <div class="aside-list-rightSection">
+                  <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                  <p>04:12</p>
+                </div>
+              </li>
+              <!-- Item - 3 -->
+              <li>
+                <div class="aside-list-leftSection">
+                  <img
+                    src="https://a10.gaanacdn.com/gn_img/song/6Zxb2r7b9w/xb2jvG6Gb9/size_m_1570080954.webp"
+                    alt=""
+                    class="aside-list-leftSection-img"
+                  />
+                  <p>Tum Hi Aana</p>
+                </div>
+
+                <div class="aside-list-rightSection">
+                  <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                  <p>04:12</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Lower Part -->
+        <section class="aside-part">
+          <div class="aside-part-heading recently-played">
+            <h1>Recently Played</h1>
+            <a href="">View All</a>
+          </div>
+
+          <div class="aside-list">
+            <ul type="none">
+              <!-- Item - 1 -->
+              <li>
+                <div class="aside-list-leftSection">
+                  <p>01</p>
+                  <img
+                    src="https://a10.gaanacdn.com/gn_img/song/0wrb4kNWLg/rb4eoe4vKL/size_m_1576899539.webp"
+                    alt=""
+                    class="aside-list-leftSection-img recently-played-img"
+                  />
+                  <p>Muqabla</p>
+                </div>
+
+                <div class="aside-list-rightSection">
+                  <i class="far fa-heart like"></i>
+                </div>
+              </li>
+              <!-- Item - 2 -->
+              <li>
+                <div class="aside-list-leftSection">
+                  <p>02</p>
+                  <img
+                    src="./Images/gal karke.jpg"
+                    alt=""
+                    class="
+                      aside-list-leftSection-img
+                      recently-played-img
+                      playing
+                    "
+                  />
+                  <p>Gal Karke</p>
+                </div>
+
+                <div class="aside-list-rightSection">
+                  <i class="far fa-heart like"></i>
+                </div>
+              </li>
+              <!-- Item - 3 -->
+              <li>
+                <div class="aside-list-leftSection">
+                  <p>03</p>
+                  <img
+                    src="https://a10.gaanacdn.com/images/song/83/30880083/crop_175x175_1596633535.jpg"
+                    alt=""
+                    class="aside-list-leftSection-img recently-played-img"
+                  />
+                  <p>Kyon?</p>
+                </div>
+
+                <div class="aside-list-rightSection">
+                  <i class="far fa-heart like"></i>
+                </div>
+              </li>
+              <!-- Item - 4 -->
+              <li>
+                <div class="aside-list-leftSection">
+                  <p>04</p>
+                  <img
+                    src="https://a10.gaanacdn.com/images/albums/58/2772458/crop_175x175_1567516167_2772458.jpg"
+                    alt=""
+                    class="aside-list-leftSection-img recently-played-img"
+                  />
+                  <p>Khairiyat</p>
+                </div>
+
+                <div class="aside-list-rightSection">
+                  <i class="far fa-heart like"></i>
+                </div>
+              </li>
+              <!-- Item - 5 -->
+              <li>
+                <div class="aside-list-leftSection">
+                  <p>05</p>
+                  <img
+                    src="https://a10.gaanacdn.com/images/song/2/28085302/crop_175x175_1568165657.jpg"
+                    alt=""
+                    class="aside-list-leftSection-img recently-played-img"
+                  />
+                  <p>Ishq Tera</p>
+                </div>
+
+                <div class="aside-list-rightSection">
+                  <i class="far fa-heart like"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </header>
+    <!-- ASIDE ELEMENT OF THE PAGE CONTAINING CONTAINING LISTS -->
+    <aside class="aside">
+      <!-- Upper Part -->
+      <section class="aside-part">
+        <div class="aside-part-heading">
+          <h1>Similiar Playlists</h1>
+          <a href="">View All</a>
+        </div>
+
+        <div class="aside-list">
+          <ul type="none">
+            <!-- Item - 1 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <img
+                  src="https://a10.gaanacdn.com/gn_img/song/6Zxb2r7b9w/xb2jvG6Gb9/size_m_1570080954.webp"
+                  alt=""
+                  class="aside-list-leftSection-img"
+                />
+                <p>Tum Hi Aana</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                <p>04:12</p>
+              </div>
+            </li>
+            <!-- Item - 2 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <img
+                  src="https://a10.gaanacdn.com/gn_img/song/6Zxb2r7b9w/xb2jvG6Gb9/size_m_1570080954.webp"
+                  alt=""
+                  class="aside-list-leftSection-img"
+                />
+                <p>Tum Hi Aana</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                <p>04:12</p>
+              </div>
+            </li>
+            <!-- Item - 3 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <img
+                  src="https://a10.gaanacdn.com/gn_img/song/6Zxb2r7b9w/xb2jvG6Gb9/size_m_1570080954.webp"
+                  alt=""
+                  class="aside-list-leftSection-img"
+                />
+                <p>Tum Hi Aana</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                <p>04:12</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Lower Part -->
+      <section class="aside-part">
+        <div class="aside-part-heading recently-played">
+          <h1>Recently Played</h1>
+          <a href="">View All</a>
+        </div>
+
+        <div class="aside-list">
+          <ul type="none">
+            <!-- Item - 1 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <p>01</p>
+                <img
+                  src="https://a10.gaanacdn.com/gn_img/song/0wrb4kNWLg/rb4eoe4vKL/size_m_1576899539.webp"
+                  alt=""
+                  class="aside-list-leftSection-img recently-played-img"
+                />
+                <p>Muqabla</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <i class="far fa-heart like"></i>
+              </div>
+            </li>
+            <!-- Item - 2 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <p>02</p>
+                <img
+                  src="./Images/gal karke.jpg"
+                  alt=""
+                  class="aside-list-leftSection-img recently-played-img playing"
+                />
+                <p>Gal Karke</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <i class="far fa-heart like"></i>
+              </div>
+            </li>
+            <!-- Item - 3 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <p>03</p>
+                <img
+                  src="https://a10.gaanacdn.com/images/song/83/30880083/crop_175x175_1596633535.jpg"
+                  alt=""
+                  class="aside-list-leftSection-img recently-played-img"
+                />
+                <p>Kyon?</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <i class="far fa-heart like"></i>
+              </div>
+            </li>
+            <!-- Item - 4 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <p>04</p>
+                <img
+                  src="https://a10.gaanacdn.com/images/albums/58/2772458/crop_175x175_1567516167_2772458.jpg"
+                  alt=""
+                  class="aside-list-leftSection-img recently-played-img"
+                />
+                <p>Khairiyat</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <i class="far fa-heart like"></i>
+              </div>
+            </li>
+            <!-- Item - 5 -->
+            <li>
+              <div class="aside-list-leftSection">
+                <p>05</p>
+                <img
+                  src="https://a10.gaanacdn.com/images/song/2/28085302/crop_175x175_1568165657.jpg"
+                  alt=""
+                  class="aside-list-leftSection-img recently-played-img"
+                />
+                <p>Ishq Tera</p>
+              </div>
+
+              <div class="aside-list-rightSection">
+                <i class="far fa-heart like"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </aside>
+    <!-- MAIN SECTION OF THE PAGE CONTANING THE REMANING CONTENT -->
+    <main>
+      <!-- MAIN PAGE GRID -->
+      <section class="playlist-grid">
+        <div class="playlist-grid-main">
+          <div class="playlist-grid-main-img">
+            <img src="./Images/Second Page-Grid/main-1.jpg" alt="" />
+          </div>
+          <div class="playlist-grid-main-content">
+            <div class="playlist-heading">
+              <div class="name">
+                <h1>Angel on fire</h1>
+                <h4>Halsey</h4>
+              </div>
+              <div class="followers"><h5>10M followers</h5></div>
+            </div>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              eaque ea id quisquam autem nesciunt quibusdam odit dolorem, ipsam
+              eos? Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Debitis necessitatibus sit maiores.
+            </p>
+            <a href="" class="play-btn">Play All</a>
+
+            <a href="" class="follow-btn">Follow</a>
+            <br /><br />
+            <p>247 Tracks|127Albums</p>
+          </div>
+        </div>
+        <!-- Part - 1 -->
+        <div class="playlist-grid-part">
+          <div class="playlist-grid-part-img">
+            <p>01</p>
+            &emsp;
+            <div class="img-container">
+              <img
+                src="https://a10.gaanacdn.com/gn_img/song/0wrb4kNWLg/rb4eoe4vKL/size_m_1576899539.webp"
+                alt=""
+              />
+            </div>
+            &emsp;
+            <h4>Muqabala</h4>
+          </div>
+          <p>04:12</p>
+          <div class="playlist-grid-part-icon">
+            <i class="far fa-heart like"></i> &emsp;
+            <i class="fas fa-plus" style="font-size: 20px; cursor: pointer"></i>
+          </div>
+        </div>
+        <!-- Part - 2 -->
+        <div class="playlist-grid-part">
+          <div class="playlist-grid-part-img">
+            <p>02</p>
+            &emsp;
+            <div class="img-container">
+              <img src="./Images/gal karke.jpg" alt="" />
+            </div>
+            &emsp;
+            <h4>Gal Karke</h4>
+          </div>
+          <div class="playlist-grid-part-icon">
+            <i class="far fa-heart like"></i> &emsp;
+            <i class="fas fa-plus" style="font-size: 20px; cursor: pointer"></i>
+          </div>
+        </div>
+        <!-- Part - 3 -->
+        <div class="playlist-grid-part">
+          <div class="playlist-grid-part-img">
+            <p>03</p>
+            &emsp;
+            <div class="img-container">
+              <img
+                src="https://a10.gaanacdn.com/images/song/83/30880083/crop_175x175_1596633535.jpg"
+                alt=""
+              />
+            </div>
+            &emsp;
+            <h4>Kyon?</h4>
+          </div>
+          <div class="playlist-grid-part-icon">
+            <i class="far fa-heart like"></i> &emsp;
+            <i class="fas fa-plus" style="font-size: 20px; cursor: pointer"></i>
+          </div>
+        </div>
+        <!-- Part - 4 -->
+        <div class="playlist-grid-part">
+          <div class="playlist-grid-part-img">
+            <p>04</p>
+            &emsp;
+            <div class="img-container">
+              <img
+                src="https://a10.gaanacdn.com/images/albums/58/2772458/crop_175x175_1567516167_2772458.jpg"
+                alt=""
+              />
+            </div>
+            &emsp;
+            <h4>Khairiyat</h4>
+          </div>
+          <div class="playlist-grid-part-icon">
+            <i class="far fa-heart like"></i> &emsp;
+            <i class="fas fa-plus" style="font-size: 20px; cursor: pointer"></i>
+          </div>
+        </div>
+        <!-- Part - 5 -->
+        <div class="playlist-grid-part">
+          <div class="playlist-grid-part-img">
+            <p>05</p>
+            &emsp;
+            <div class="img-container">
+              <img
+                src="https://a10.gaanacdn.com/images/song/2/28085302/crop_175x175_1568165657.jpg"
+                alt=""
+              />
+            </div>
+            &emsp;
+            <h4>Ishq Tera</h4>
+          </div>
+          <div class="playlist-grid-part-icon">
+            <i class="far fa-heart like"></i> &emsp;
+            <i class="fas fa-plus" style="font-size: 20px; cursor: pointer"></i>
+          </div>
+        </div>
+        <!-- Part - 6 -->
+        <div class="playlist-grid-part">
+          <div class="playlist-grid-part-img">
+            <p>06</p>
+            &emsp;
+            <div class="img-container">
+              <img
+                src="https://a10.gaanacdn.com/gn_img/song/6Zxb2r7b9w/xb2jvG6Gb9/size_m_1570080954.webp"
+                alt=""
+              />
+            </div>
+            &emsp;
+            <h4>Tum Hi Aana</h4>
+          </div>
+          <div class="playlist-grid-part-icon">
+            <i class="far fa-heart like"></i> &emsp;
+            <i class="fas fa-plus" style="font-size: 20px; cursor: pointer"></i>
+          </div>
+        </div>
+        <!-- Part - 7 -->
+        <div class="playlist-grid-part">
+          <div class="playlist-grid-part-img">
+            <p>07</p>
+            &emsp;
+            <div class="img-container">
+              <img
+                src="https://a10.gaanacdn.com/images/song/21/29421921/crop_175x175_1580472869.jpg"
+                alt=""
+              />
+            </div>
+            &emsp;
+            <h4>Biba</h4>
+          </div>
+          <div class="playlist-grid-part-icon">
+            <i class="far fa-heart like"></i> &emsp;
+            <i class="fas fa-plus" style="font-size: 20px; cursor: pointer"></i>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- THIS IS THE MUSIC PLAYER SYSTEM OF THE WESBITE -->
+    <footer class="footer">
+      <section class="footer-part-1">
+        <img
+          src="https://a10.gaanacdn.com/images/albums/84/4371784/crop_175x175_4371784.jpg"
+          alt=""
+          class="footer-part-1-img"
+        />
+        <h1 class="footer-part-1-h1">Filhaal 2</h1>
+        <div class="footer-part-1-img-icons">
+          <i class="far fa-heart like"></i>
+          <i class="fas fa-ban"></i>
+        </div>
+      </section>
+
+      <section class="footer-part-2">
+        <div class="footer-part-2-action">
+          <i class="fas fa-random"></i>
+          <i class="fas fa-backward"></i>
+          <i class="far fa-play-circle" style="font-size: 25px"></i>
+          <i class="fas fa-forward"></i>
+          <img src="./Assests/Images/repeat.png" alt="" />
+        </div>
+        <br />
+
+        <div class="footer-part-2-vol">
+          <span class="span-1"> 04:02</span>
+
+          <input
+            type="range"
+            name="volume"
+            id="volume"
+            value="0"
+            min="0"
+            max="100"
+          />
+          <span class="span-2">02:01</span>
+        </div>
+      </section>
+
+      <section class="footer-part-3">
+        <i class="fas fa-outdent"></i>
+        <img src="./Assests/Images/computer.png" alt="" />
+        <div class="volume">
+          <i class="fas fa-volume-up"></i>
+          <input type="range" name="vol" id="" min="0" max="100" value="50" />
+        </div>
+        <i class="fas fa-expand" onclick="mKeyF11()"></i>
+      </section>
+    </footer>
+
+    <!-- SOME JAVASCRIPT FOR MAKING IT MORE INTERACTIVE -->
+
+    <script>
+      var Color = document.querySelectorAll(".like");
+      var ColorArr = Array.from(Color);
+      document.querySelectorAll(".like").forEach((item) => {
+        item.addEventListener("click", (e) => {
+          //handle click
+          console.log(e.target);
+          var likeClr = e.target;
+          likeClr.classList.toggle("colorChange");
+        });
+      });
+
+      function mKeyF11() {
+        if (document.documentElement.webkitRequestFullscreen) {
+          document.documentElement.webkitRequestFullscreen();
+        }
+      }
+
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "400px";
+        document.getElementById("mySidenav").style.zIndex = "10";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("mySidenav").style.zIndex = "-1";
+      }
+    </script>
+  </body>
+</html>
